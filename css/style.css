@@ -65,3 +65,30 @@ nav button:focus {
     box-shadow: 0 0 40px #555555;
     letter-spacing: 0.02rem;
 }
+.github-corner svg{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 0;
+    right: 0;
+    fill:#151513;
+    color:white;
+    stroke-dasharray: 859.9161987304688;
+    animation: outline_github-corner 2s;
+}
+@keyframes outline_github-corner{
+    0%{
+        stroke: white;
+        stroke-width: .1rem;
+        stroke-dashoffset: 859.9161987304688;
+        fill-opacity: 0;
+    }80%{
+        stroke-width: .1rem;
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    }100%{
+        stroke: white;
+        stroke-width: 0;
+        fill-opacity: 1;
+    }
+}
