@@ -1,0 +1,26 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"F_OFF_EB","val":1},
+		{"id":"F_OFF_EYE","val":0},
+		{"id":"F_OFF_EYE_1","val":1},
+		{"id":"F_OFF_NOSE","val":0},
+		{"id":"F_OFF_MOUTH","val":1},
+		{"id":"F_OFF_WHITE","val":0},
+		{"id":"EMO_A","val":0},
+		{"id":"nonsense","val":0},
+		{"id":"sigh","val":0},
+		{"id":"pain","val":0},
+		{"id":"smile","val":0},
+		{"id":"angry","val":0},
+		{"id":"serious","val":1},
+		{"id":"fury","val":0},
+		{"id":"eye_fury","val":0},
+		{"id":"superfury","val":0},
+		{"id":"sulky","val":0},
+		{"id":"surprise","val":0},
+		{"id":"TEMPT_ON","val":0}
+	]
+}

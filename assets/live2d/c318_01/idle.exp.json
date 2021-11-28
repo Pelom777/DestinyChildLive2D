@@ -1,0 +1,10 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"FACE_OP","val":0},
+		{"id":"PAIN","val":0},
+		{"id":"SHOCK","val":0}
+	]
+}

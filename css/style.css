@@ -1,0 +1,67 @@
+html{
+    font-size: 16px;
+}
+#glcanvas{
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: -1.2rem;
+    width: 12rem;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+    direction: rtl;
+}
+nav:hover{
+    left: 0;
+}
+nav button {
+    width: 8rem;
+    height: 5vh;
+    border-style: none;
+    font-size: 1rem;
+    position: relative;
+}
+nav button:hover {
+    background: #ccc;
+    transform: scale(1.1);
+    z-index: 1;
+}
+nav button:focus {
+    background: #fff555;
+    transform: scale(1.2);
+    box-shadow: 0 0 .5rem gray;
+    z-index: 2;
+}
+#copyright{ 
+    position: fixed; 
+    text-align: center; 
+    margin: 10px; 
+    right: 0; 
+    bottom: 0; 
+    color: white;
+}
+#copyright a{ 
+    color: aqua;
+}
+.message{
+    display: none;
+    position: fixed;
+    width: 16rem;
+    min-height: 2rem;
+    left: 50%;
+    top: 10%;
+    margin-left: -10rem;
+    padding: 2rem;
+    background: #f5f5f5b4;
+    border-radius: 16px;
+    word-break: break-all;
+    color: #3d3d3d;
+    box-shadow: 0 0 40px #555555;
+    letter-spacing: 0.02rem;
+}

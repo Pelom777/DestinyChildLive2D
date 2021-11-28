@@ -1,0 +1,10 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"glasses_change","val":-30,"def":-30},
+		{"id":"idle_op","val":30,"def":30},
+		{"id":"pain_op","val":-30,"def":-30}
+	]
+}

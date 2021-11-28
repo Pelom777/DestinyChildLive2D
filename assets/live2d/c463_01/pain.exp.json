@@ -1,0 +1,12 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"face_op","val":-30,"def":30},
+		{"id":"sigh_op","val":-30,"def":-30},
+		{"id":"angry_op","val":-30,"def":-30},
+		{"id":"affair_op","val":-30,"def":-30},
+		{"id":"pain_op","val":30,"def":-30}
+	]
+}

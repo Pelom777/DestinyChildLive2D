@@ -1,0 +1,14 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"EMT_SWITCH","val":30},
+		{"id":"EMT_SMILE","val":0},
+		{"id":"EMT_CNFSD","val":0},
+		{"id":"EMT_SHY","val":0},
+		{"id":"EMT_HAAH","val":0},
+		{"id":"EMT_SAD","val":1},
+		{"id":"PARAM_EYE_EX","val":-15,"def":-30}
+	]
+}

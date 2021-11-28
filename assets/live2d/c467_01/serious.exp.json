@@ -1,0 +1,20 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"BROW_IDLE","val":0,"def":1},
+		{"id":"BROW_PAIN","val":0},
+		{"id":"BROW_SER","val":1},
+		{"id":"EYES_BASE","val":1,"def":1},
+		{"id":"EYES_IDLE","val":0,"def":1},
+		{"id":"EYES_PAIN","val":1},
+		{"id":"EYES_SER","val":0},
+		{"id":"MOUTH_IDLE","val":0,"def":1},
+		{"id":"MOUTH_PAIN","val":0},
+		{"id":"MOUTH_SER","val":1},
+		{"id":"FACE_IDLE","val":0,"def":1},
+		{"id":"FACE_PAIN","val":0},
+		{"id":"FACE_SER","val":1}
+	]
+}

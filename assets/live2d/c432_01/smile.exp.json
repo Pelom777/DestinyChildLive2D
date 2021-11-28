@@ -1,0 +1,14 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"IDLE_BROW","val":0,"def":1},
+		{"id":"IDLE_EYELASH","val":0,"def":1},
+		{"id":"IDLE_FACE","val":1,"def":1},
+		{"id":"IDLE_MOUTH","val":0,"def":1},
+		{"id":"SMILE_EYE","val":1},
+		{"id":"SMILE_BROW","val":1},
+		{"id":"SMILE_MOUTH","val":1}
+	]
+}

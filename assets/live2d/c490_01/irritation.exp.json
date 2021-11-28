@@ -1,0 +1,12 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"SERIOUS","val":0},
+		{"id":"IRRITATION","val":1},
+		{"id":"TEACH","val":0},
+		{"id":"MOU_OFF","val":1},
+		{"id":"BROW_OFF","val":1}
+	]
+}

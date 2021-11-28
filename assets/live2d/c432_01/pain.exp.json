@@ -1,0 +1,15 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"IDLE_BROW","val":1,"def":1},
+		{"id":"IDLE_EYELASH","val":0,"def":1},
+		{"id":"IDLE_FACE","val":0,"def":1},
+		{"id":"IDLE_MOUTH","val":0,"def":1},
+		{"id":"PAIN_FACE","val":1},
+		{"id":"PAIN_EYE","val":1},
+		{"id":"PAIN_BROW","val":1},
+		{"id":"PAIN_MOUTH","val":1}
+	]
+}

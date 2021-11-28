@@ -1,0 +1,13 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"EYELASH_ON","val":0,"def":1},
+		{"id":"PUPIL_ON","val":0,"def":1},
+		{"id":"EHL_ON","val":0,"def":1},
+		{"id":"MOUTH_ON","val":0,"def":1},
+		{"id":"BROW_ON","val":0,"def":1},
+		{"id":"IRRITATION_ON","val":1}
+	]
+}

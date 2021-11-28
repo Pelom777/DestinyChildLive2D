@@ -1,0 +1,16 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"R_EYE_CLOSE","val":-21.36,"def":-30},
+		{"id":"L_EYE_CLOSE","val":-21.36,"def":-30},
+		{"id":"EYE_OFF","val":0},
+		{"id":"MOUTH_OFF","val":1},
+		{"id":"BROW_OFF","val":1},
+		{"id":"ANGRY","val":0},
+		{"id":"HAAH","val":0},
+		{"id":"TEMPT","val":1},
+		{"id":"SERIOUS","val":0}
+	]
+}

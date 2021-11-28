@@ -1,0 +1,24 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"IDLE_PUPIL","val":1,"def":1},
+		{"id":"IDLE_EHL","val":1,"def":1},
+		{"id":"IDLE_LIDS","val":1,"def":1},
+		{"id":"IDLE_BROW","val":0,"def":1},
+		{"id":"IDLE_MOUTH","val":0,"def":1},
+		{"id":"IDLE_MHL","val":0,"def":1},
+		{"id":"CONF_PUPIL","val":0},
+		{"id":"CONF_LIDS","val":0},
+		{"id":"CONF_BROW","val":0},
+		{"id":"CONF_MOUTH","val":0},
+		{"id":"CONF_FACE","val":0},
+		{"id":"JOY_MOUTH","val":0},
+		{"id":"JOY_BLUSH","val":0},
+		{"id":"SAD_BROW","val":1},
+		{"id":"SAD_MOUTH","val":1},
+		{"id":"SAD_FACE","val":1},
+		{"id":"SAD_TEARS","val":1}
+	]
+}

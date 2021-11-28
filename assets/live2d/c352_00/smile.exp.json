@@ -1,0 +1,23 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"PARAM_BLUSHER_FACE","val":30},
+		{"id":"PARAM_EYE_FACE","val":-30},
+		{"id":"PARAM_BROW_FACE","val":0},
+		{"id":"PARAM_SHADOW","val":-30},
+		{"id":"PARAM_GLASS_FACE","val":30},
+		{"id":"PARAM_DROP_FACE","val":-30},
+		{"id":"PARAM_SIGH_FACE","val":0},
+		{"id":"EYE_IDLE_ON","val":0,"def":1},
+		{"id":"EYE_SMILE_ON","val":1},
+		{"id":"BROW_IDLE_ON","val":1,"def":1},
+		{"id":"BROW_SIGH_ON","val":0},
+		{"id":"BROW_HAAH_ON","val":0},
+		{"id":"LIP_IDLE_ON","val":0,"def":1},
+		{"id":"LIP_SIGH_ON","val":0},
+		{"id":"LIP_SMILE_ON","val":1},
+		{"id":"LIP_HAAH_ON","val":0}
+	]
+}

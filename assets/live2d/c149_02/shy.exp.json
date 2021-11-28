@@ -1,0 +1,18 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"MOUTH_LS","val":0},
+		{"id":"brow_op","val":-30,"def":30},
+		{"id":"line_op","val":-30,"def":30},
+		{"id":"eye_hi_op","val":-30,"def":30},
+		{"id":"mouth_op","val":-30,"def":30},
+		{"id":"confu_Brow_op","val":-30,"def":-30},
+		{"id":"confu_line_op","val":-30,"def":-30},
+		{"id":"confu_tear","val":-30,"def":-30},
+		{"id":"sad_blur_op","val":-30,"def":-30},
+		{"id":"shy_eye_op","val":30,"def":-30},
+		{"id":"smile_op","val":-30,"def":-30}
+	]
+}

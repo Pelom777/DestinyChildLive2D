@@ -1,0 +1,10 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":00,
+	"fade_out":00,
+	"params":[
+		{"id":"BROW_OFF","val":1},
+		{"id":"MOUTH_OFF","val":1},
+		{"id":"SULKY_ON","val":1}
+	]
+}

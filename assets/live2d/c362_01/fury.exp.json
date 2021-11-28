@@ -1,0 +1,26 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"BROW_X","val":-5.04},
+		{"id":"BROW_Y","val":12.72},
+		{"id":"BROW_Z","val":30},
+		{"id":"EYE_OFF","val":0},
+		{"id":"MOU_OFF","val":1},
+		{"id":"R_pBROW_OFF","val":0},
+		{"id":"L_BROW_OFF","val":0},
+		{"id":"SAD","val":0},
+		{"id":"SMILE","val":0},
+		{"id":"SMILE_MOU","val":0},
+		{"id":"RED","val":0},
+		{"id":"FURY","val":1},
+		{"id":"FURY_MOU","val":0},
+		{"id":"DEAD","val":0},
+		{"id":"WING_ATK","val":0},
+		{"id":"confused","val":0},
+		{"id":"pain","val":0},
+		{"id":"cry","val":0},
+		{"id":"serious","val":0}
+	]
+}

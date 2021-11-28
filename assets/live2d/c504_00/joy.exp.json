@@ -1,0 +1,18 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"EB_OP","val":1},
+		{"id":"EYE_OP","val":1},
+		{"id":"EYE_OP_ANGRY","val":0},
+		{"id":"BOL_OP_HAAH","val":0},
+		{"id":"LIP_OP","val":1},
+		{"id":"haah_OP","val":0},
+		{"id":"confused_OP","val":0},
+		{"id":"angry_OP","val":0},
+		{"id":"pretense_OP","val":0},
+		{"id":"joy_op","val":1},
+		{"id":"affair_OP","val":0}
+	]
+}

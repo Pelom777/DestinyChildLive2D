@@ -1,0 +1,26 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"MOUTH","val":0},
+		{"id":"MOUTH_S","val":0},
+		{"id":"EB_RT","val":0},
+		{"id":"EB_Y","val":24},
+		{"id":"EB_YA","val":24},
+		{"id":"EYE_HY","val":0},
+		{"id":"EYE_X","val":0},
+		{"id":"EYE_Y","val":0},
+		{"id":"EB_OFF","val":0,"def":15},
+		{"id":"MOUTH_OFF","val":15},
+		{"id":"MOUTH_OFF_A","val":0},
+		{"id":"EYE_OFF","val":0},
+		{"id":"EYE_OFF_A","val":0},
+		{"id":"EYE_OFF_B","val":0},
+		{"id":"EYE_OFF_C","val":0},
+		{"id":"EYE_OFF_Ca","val":0},
+		{"id":"EYE_OFF_D","val":0},
+		{"id":"EYE_T_OFF","val":0},
+		{"id":"EYE_H_OFF","val":0}
+	]
+}

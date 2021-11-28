@@ -1,0 +1,9 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":00,
+	"fade_out":00,
+	"params":[
+		{"id":"EMT_IDLE","val":1},
+		{"id":"EMT_ANGRY","val":1}
+	]
+}

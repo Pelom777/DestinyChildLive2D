@@ -1,0 +1,15 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"F_OFF_EB","val":0},
+		{"id":"F_OFF_EYE","val":0},
+		{"id":"F_OFF_EYE_1","val":0},
+		{"id":"F_OFF_NOSE","val":0},
+		{"id":"F_OFF_MOUTH","val":0},
+		{"id":"F_OFF_WHITE","val":0},
+		{"id":"EMO_A","val":0},
+		{"id":"sigh","val":0}
+	]
+}

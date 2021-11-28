@@ -1,0 +1,9 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"LIP_OP","val":1},
+		{"id":"shy","val":1}
+	]
+}

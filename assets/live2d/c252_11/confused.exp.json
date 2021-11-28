@@ -1,0 +1,17 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"brow_op","val":-30,"def":30},
+		{"id":"brow2_op","val":-30,"def":-30},
+		{"id":"mouth_op","val":-30,"def":30},
+		{"id":"eye_op","val":-30,"def":30},
+		{"id":"sad_face","val":-30,"def":-30},
+		{"id":"sulky_face","val":-30,"def":-30},
+		{"id":"confused_face","val":30,"def":-30},
+		{"id":"smile_face","val":-30,"def":-30},
+		{"id":"joy_face","val":-30,"def":-30},
+		{"id":"cry_face","val":-30,"def":-30}
+	]
+}

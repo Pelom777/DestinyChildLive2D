@@ -1,0 +1,19 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"FEVER_HAAH","val":1},
+		{"id":"PARAM_SHADOW","val":-30},
+		{"id":"PARAM_GLASS","val":30},
+		{"id":"PARAM_GLASS_FACE","val":30},
+		{"id":"PARAM_DROP_FACE","val":-30},
+		{"id":"EYE_IDLE_ON","val":0,"def":1},
+		{"id":"EYE_SMILE_ON","val":1},
+		{"id":"EYE_HAAH_ON","val":1},
+		{"id":"BROW_IDLE_ON","val":0,"def":1},
+		{"id":"BROW_HAAH_ON","val":1},
+		{"id":"LIP_IDLE_ON","val":0,"def":1},
+		{"id":"LIP_HAAH_ON","val":1}
+	]
+}

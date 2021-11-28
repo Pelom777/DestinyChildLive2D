@@ -1,0 +1,17 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"base_face_op","val":-30,"def":30},
+		{"id":"02_face","val":-30,"def":-30},
+		{"id":"03_face","val":-30,"def":-30},
+		{"id":"04_face","val":-30,"def":-30},
+		{"id":"05_face","val":30,"def":-30},
+		{"id":"06_face","val":-30,"def":-30},
+		{"id":"07_face","val":-30,"def":-30},
+		{"id":"08_Face","val":-30,"def":-30},
+		{"id":"suprise_op","val":-30,"def":-30},
+		{"id":"sigh_op","val":-30,"def":-30}
+	]
+}

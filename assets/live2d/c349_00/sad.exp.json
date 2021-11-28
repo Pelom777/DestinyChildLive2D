@@ -1,0 +1,12 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"PUPIL_ON","val":0,"def":1},
+		{"id":"MOUTH_ON","val":0,"def":1},
+		{"id":"SAD_ON","val":1},
+		{"id":"PARAM_BROW_FACE","val":15},
+		{"id":"PARAM_EYE_FACE","val":15}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"Serious_ON","val":1},
+		{"id":"MOUTH_ON","val":0,"def":1},
+		{"id":"PUPIL_SCALE","val":-30},
+		{"id":"PUPIL_EX","val":-10},
+		{"id":"BROW_ROT","val":30}
+	]
+}

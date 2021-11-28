@@ -1,0 +1,13 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":00,
+	"fade_out":00,
+	"params":[
+		{"id":"BROW_OFF","val":0,"def":1},
+		{"id":"PAIN_BROW_ON","val":1},
+		{"id":"EYE_OFF","val":0,"def":1},
+		{"id":"PAIN_EYE_ON","val":1},
+		{"id":"MOUTH_OFF","val":0,"def":1},
+		{"id":"PAIN_MOUTH_ON","val":1}
+	]
+}

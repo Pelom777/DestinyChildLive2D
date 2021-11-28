@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":00,
+	"fade_out":00,
+	"params":[
+		{"id":"BROW_OFF","val":0,"def":1},
+		{"id":"SERIOUS_BROW_ON","val":1},
+		{"id":"MOUTH_OFF","val":0,"def":1},
+		{"id":"SERIOUS_MOUTH_ON","val":1}
+	]
+}

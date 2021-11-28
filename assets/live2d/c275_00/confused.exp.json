@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"nomal_face_op","val":-30,"def":30},
+		{"id":"confused_face_op","val":30,"def":-30},
+		{"id":"sigh_brow_op","val":30,"def":-30},
+		{"id":"sigh_face_op","val":-30,"def":-30}
+	]
+}

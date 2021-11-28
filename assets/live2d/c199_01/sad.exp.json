@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"idle_off","val":0},
+		{"id":"mousebrow_off","val":1},
+		{"id":"joy_on","val":0},
+		{"id":"sad_on","val":1}
+	]
+}

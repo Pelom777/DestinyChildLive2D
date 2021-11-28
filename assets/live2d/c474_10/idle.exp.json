@@ -1,0 +1,9 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":500,
+	"params":[
+		{"id":"idle_off","val":0},
+		{"id":"serious_on","val":0}
+	]
+}

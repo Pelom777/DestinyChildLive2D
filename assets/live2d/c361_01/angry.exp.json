@@ -1,0 +1,21 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"idle_eye_off","val":0},
+		{"id":"pain_eye_on","val":0},
+		{"id":"idle_mouse_off","val":1},
+		{"id":"idle_brow_off","val":1},
+		{"id":"idle_ball_off","val":1},
+		{"id":"irritation_mouse_on","val":0},
+		{"id":"irrit_angry_ball_on","val":2},
+		{"id":"angry_mouse_on","val":1},
+		{"id":"angry_brow_on","val":1},
+		{"id":"angry_face_on","val":1},
+		{"id":"pain_mouse_on","val":0},
+		{"id":"pain_brow_on","val":0},
+		{"id":"pain_face_on","val":0},
+		{"id":"serious_mouse","val":0}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"teach_op","val":-30,"def":-30},
+		{"id":"FACE_OFF","val":1},
+		{"id":"smile","val":0},
+		{"id":"serious","val":1}
+	]
+}

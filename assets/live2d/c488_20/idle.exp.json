@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"idle_on_off","val":0},
+		{"id":"smile_on_off","val":0},
+		{"id":"confused_on_off","val":0},
+		{"id":"sweat_drop_Y","val":0}
+	]
+}

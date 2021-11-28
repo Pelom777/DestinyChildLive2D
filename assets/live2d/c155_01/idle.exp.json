@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"IDLE_OP","val":0},
+		{"id":"EYE_OP","val":0},
+		{"id":"SMILE_OP","val":1,"def":1},
+		{"id":"ANGRY_OP","val":1,"def":1}
+	]
+}

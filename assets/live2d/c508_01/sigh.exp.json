@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"EB_OP","val":1},
+		{"id":"EYE_OP","val":1},
+		{"id":"LIP_OP","val":1},
+		{"id":"SIGH_OP","val":1}
+	]
+}

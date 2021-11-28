@@ -1,0 +1,45 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png",
+        "texture_01.png"
+    ],
+    "expressions":[
+        {
+            "name":"angry",
+            "file":"angry.exp.json"
+        },
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        },
+        {
+            "name":"pain",
+            "file":"pain.exp.json"
+        }
+    ],
+    "motions":{
+        "attack":[
+            {
+                "file":"c460_02_attack.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "hit":[
+            {
+                "file":"c460_02_hit.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "idle":[
+            {
+                "file":"c460_02_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

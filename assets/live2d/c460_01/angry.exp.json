@@ -1,0 +1,12 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"eye_r_lid","val":0},
+		{"id":"eye_l_lid","val":0},
+		{"id":"pain_on","val":0},
+		{"id":"angry_on","val":1},
+		{"id":"mouse","val":30}
+	]
+}
