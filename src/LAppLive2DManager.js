@@ -112,35 +112,17 @@ LAppLive2DManager.prototype.minScaleEvent = function()
 
 
 
-LAppLive2DManager.prototype.tapEvent = function(x, y)
+LAppLive2DManager.prototype.tapEvent = function(x, y, event)
 {    
     if (LAppDefine.DEBUG_LOG)
         console.log("tapEvent view x:" + x + " y:" + y);
 
-    for (var i = 0; i < this.models.length; i++)
-    {
-
-        if (this.models[i].hitTest(LAppDefine.HIT_AREA_HEAD, x, y))
-        {
-            
-            if (LAppDefine.DEBUG_LOG)
-                console.log("Tap face.");
-
-            this.models[i].setRandomExpression();
-        }
-        else if (this.models[i].hitTest(LAppDefine.HIT_AREA_BODY, x, y))
-        {
-            
-            if (LAppDefine.DEBUG_LOG)
-                console.log("Tap body." + " models[" + i + "]");
-
-            
-        }
-        else{
-            this.models[i].startRandomMotion(LAppDefine.MOTION_GROUP_HIT,
-                                             LAppDefine.PRIORITY_FORCE);
-        }
-    }
+    if(event.button == 0)
+        this.models[0].startRandomMotion(LAppDefine.MOTION_GROUP_HIT,
+                                         LAppDefine.PRIORITY_FORCE);
+    else if(event.button == 2)
+        this.models[0].startRandomMotion(LAppDefine.MOTION_GROUP_ATTACK,
+                                         LAppDefine.PRIORITY_FORCE);
 
     return true;
 };

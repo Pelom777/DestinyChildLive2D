@@ -29,6 +29,7 @@ var LAppDefine = {
     
     MOTION_GROUP_IDLE : "idle", 
     MOTION_GROUP_HIT : "hit", 
+    MOTION_GROUP_ATTACK : "attack",
     MOTION_GROUP_TAP_BODY : "tap_body", 
     MOTION_GROUP_FLICK_HEAD : "flick_head", 
     MOTION_GROUP_PINCH_IN : "pinch_in", 

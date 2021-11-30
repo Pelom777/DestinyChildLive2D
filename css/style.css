@@ -49,6 +49,25 @@ nav button:focus {
 #copyright a{ 
     color: aqua;
 }
+#move svg{
+    position: absolute;
+    left: 12rem;
+    bottom: 0;
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    fill:#f8f8f8;
+    stroke-dasharray: 6654.98583984375;
+    animation: outline_move 2s;
+}
+#move svg:hover{
+    fill: aqua;
+    transition: 0.2s;
+}
+.moving#move svg{
+    fill: blue;
+    transition: 0.1s;
+}
 .message{
     display: none;
     position: fixed;
@@ -75,6 +94,30 @@ nav button:focus {
     color:white;
     stroke-dasharray: 859.9161987304688;
     animation: outline_github-corner 2s;
+}
+.github-corner:hover .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+}
+@keyframes outline_move{
+    0%{
+        stroke: white;
+        stroke-width: .5rem;
+        stroke-dashoffset: 6654.98583984375;
+        fill-opacity: 0;
+    }80%{
+        stroke-width: .5rem;
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    }100%{
+        stroke: white;
+        stroke-width: 0;
+        fill-opacity: 1;
+    }
+}
+@keyframes octocat-wave{
+    0%,100%{transform:rotate(0)}
+    20%,60%{transform:rotate(-25deg)}
+    40%,80%{transform:rotate(10deg)}
 }
 @keyframes outline_github-corner{
     0%{

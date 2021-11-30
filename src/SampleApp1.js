@@ -63,28 +63,57 @@ function initL2dCanvas(canvasId)
 }
 
 var showMessage = function (text, delay) {
-    var msg = $('<div></div>').attr('class', 'message');
-    $('body').append(msg);
+    var $msg = $('<div></div>').attr('class', 'message');
+    $('body').append($msg);
         
-    if (msg.css('display') != 'none') {
-        msg.finish();
+    if ($msg.css('display') != 'none') {
+        $msg.finish();
     }
-    msg.html(text);
-    msg.fadeIn(500).delay(delay).fadeOut(500);
+    $msg.html(text);
+    $msg.fadeIn(500).delay(delay).fadeOut(500);
 }
 
 function init()
 {
-    showMessage('滚动滚轮以缩放，按住右键以移动', 4000);
+    showMessage('滚动滚轮以缩放<br>点击左下角图标开始拖动', 4000);
 
-    box=document.getElementById('box');
+    isMoving = false;
+    $move = $('#move');
+    $move.on('click', function(){
+        if(isMoving == true){
+            isMoving = false;
+            $move.removeClass('moving');
+            $(document).off('mousedown');
+        }
+        else{
+            isMoving = true;
+            $move.addClass('moving');
+            $(document).on('mousedown', function(e){
+                console.log(e.button);
+                if(e.button != 0)
+                    return;
+                var startX = e.clientX, startY = e.clientY;
+                $(document).on('mousemove', function(e){
+                    offsetX = e.clientX - startX, offsetY = e.clientY - startY;
+                    startX = e.clientX, startY = e.clientY;
+                    thisRef.viewMatrix.multTranslate(offsetX / 225, - offsetY / 225);
+                })
+                $(document).on('mouseup', function(){
+                    $(document).off('mousemove');
+                    $(document).off('mouseup');
+                })
+            })
+        }
+    })
+
+    $box = $('#box');
     for(var i=0;i<names.length;i++) {
-        tmp=document.createElement('button');
-        tmp.innerHTML=names[i];
-        tmp.onclick = function(){
+        $button = $('<button></button>');
+        $button.text(names[i])
+        $button.on('click',function(){
             changeModel(this.innerHTML);
-        };
-        box.appendChild(tmp);
+        })
+        $box.append($button);
     }
 
     document.onwheel = function(e){
@@ -93,21 +122,6 @@ function init()
         if(e.wheelDelta > 0)
             modelScaling(1.1);
         else modelScaling(0.9);
-    }
-    
-    document.onmousedown = function(e){
-        if(e.button != 2)
-            return;
-        var startX = e.clientX, startY = e.clientY;
-        document.onmousemove = function(e){
-            offsetX = e.clientX - startX, offsetY = e.clientY - startY;
-            startX = e.clientX, startY = e.clientY;
-            thisRef.viewMatrix.multTranslate(offsetX / 225, - offsetY / 225);
-        }
-        document.onmouseup = function(){
-            document.onmousemove = null;
-            document.onmouseup = null;
-        }
     }
 
     var width = this.canvas.width;
@@ -281,8 +295,9 @@ function modelTurnHead(event)
 
     thisRef.dragMgr.setPoint(vx, vy); 
     
-    
-    thisRef.live2DMgr.tapEvent(vx, vy);
+    if(isMoving)
+        return;
+    thisRef.live2DMgr.tapEvent(vx, vy, event);
 }
 
 
@@ -339,7 +354,7 @@ function mouseEvent(e)
     } else if (e.type == "mousedown") {
 
         
-        if("button" in e && e.button != 0) return;
+        if("button" in e && e.button == 1) return;
         
         modelTurnHead(e);
         
