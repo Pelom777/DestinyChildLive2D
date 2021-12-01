@@ -1,0 +1,45 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png",
+        "texture_01.png"
+    ],
+    "motions":{
+        "attack":[
+            {
+                "file":"m241_01_attack.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "end":[
+            {
+                "file":"m241_01_end.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "hit":[
+            {
+                "file":"m241_01_hit.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "idle":[
+            {
+                "file":"m241_01_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "start":[
+            {
+                "file":"m241_01_start.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

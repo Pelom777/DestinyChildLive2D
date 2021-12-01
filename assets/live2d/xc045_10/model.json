@@ -1,0 +1,40 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png"
+    ],
+    "expressions":[
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        },
+        {
+            "name":"smile",
+            "file":"smile.exp.json"
+        }
+    ],
+    "motions":{
+        "attack":[
+            {
+                "file":"xc045_10_attack.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "idle":[
+            {
+                "file":"xc045_10_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "walk":[
+            {
+                "file":"xc045_10_walk.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

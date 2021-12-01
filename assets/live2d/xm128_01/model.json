@@ -1,0 +1,44 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png"
+    ],
+    "motions":{
+        "attack":[
+            {
+                "file":"xm128_01_attack.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "die":[
+            {
+                "file":"xm128_01_die.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "hit":[
+            {
+                "file":"xm128_01_hit.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "idle":[
+            {
+                "file":"xm128_01_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "walk":[
+            {
+                "file":"xm128_01_walk.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

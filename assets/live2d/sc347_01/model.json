@@ -1,0 +1,38 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png"
+    ],
+    "physics":"physics.json",
+    "motions":{
+        "idle":[
+            {
+                "file":"sc347_01_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "max":[
+            {
+                "file":"sc347_01_max.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "maxtouch":[
+            {
+                "file":"sc347_01_maxtouch.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "touch":[
+            {
+                "file":"sc347_01_touch.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

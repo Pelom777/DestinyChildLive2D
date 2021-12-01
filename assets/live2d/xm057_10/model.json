@@ -1,0 +1,30 @@
+{
+    "version":"Sample 1.0.0",
+    "model":"model.moc",
+    "textures":[
+        "texture_00.png"
+    ],
+    "motions":{
+        "attack":[
+            {
+                "file":"xm057_10_attack.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "idle":[
+            {
+                "file":"xm057_10_idle.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
+        "walk":[
+            {
+                "file":"xm057_10_walk.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ]
+    }
+}

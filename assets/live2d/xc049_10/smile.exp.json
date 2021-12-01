@@ -1,0 +1,10 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"FACE_IDLE_OP","val":1},
+		{"id":"FACE_EXP_OP","val":1},
+		{"id":"BROW_OP","val":1}
+	]
+}

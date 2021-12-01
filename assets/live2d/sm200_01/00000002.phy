@@ -1,0 +1,35 @@
+{
+	"type":"Live2D Physics",
+	"physics_hair":[
+		{
+			"label":"WING",
+			"setup":{
+				"length":0.15,
+				"regist":0.65,
+				"mass":0.1
+			},
+			"src":[
+				{
+					"id":"PARAM_BODY_ANGLE_X",
+					"ptype":"x",
+					"scale":0.015,
+					"weight":1
+				},
+				{
+					"id":"PARAM_BODY_Z",
+					"ptype":"angle",
+					"scale":2.4,
+					"weight":1
+				}
+			],
+			"targets":[
+				{
+					"id":"PARAM_WING",
+					"ptype":"angle",
+					"scale":0.022,
+					"weight":1
+				}
+			]
+		}
+	]
+}
