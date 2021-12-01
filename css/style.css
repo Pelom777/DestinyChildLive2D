@@ -6,37 +6,41 @@ html{
     left: 0;
     top: 0;
 }
-nav {
+nav{
     position: fixed;
     top: 0;
-    left: -1.2rem;
+    left: -10rem;
     width: 12rem;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     text-align: center;
     direction: rtl;
+    transition: .5s;
 }
 nav:hover{
     left: 0;
+    z-index: 1;
 }
-nav button {
+nav button{
     width: 8rem;
     height: 5vh;
     border-style: none;
     font-size: 1rem;
     position: relative;
 }
-nav button:hover {
+nav button:hover{
     background: #ccc;
+    border-radius: .1rem;
     transform: scale(1.1);
-    z-index: 1;
+    z-index: 2;
 }
-nav button:focus {
+nav button.current{
     background: #fff555;
+    border-radius: .1rem;
     transform: scale(1.2);
     box-shadow: 0 0 .5rem gray;
-    z-index: 2;
+    z-index: 3;
 }
 #copyright{ 
     position: fixed; 
@@ -46,12 +50,31 @@ nav button:focus {
     bottom: 0; 
     color: white;
 }
-#copyright a{ 
+#copyright a{
     color: aqua;
+}
+#share svg{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 0;
+    left: 3rem;
+    margin: .5rem;
+    fill:#f8f8f8;
+    stroke-dasharray: 5677.25390625;
+    animation: outline_share 2s;
+}
+#share svg:hover{
+    fill: aqua;
+    transition: 0.2s;
+}
+#share svg:active{
+    fill: blue;
+    transition: 0.1s;
 }
 #move svg{
     position: absolute;
-    left: 12rem;
+    left: 3rem;
     bottom: 0;
     width: 4rem;
     height: 4rem;
@@ -97,6 +120,22 @@ nav button:focus {
 }
 .github-corner:hover .octo-arm{
     animation:octocat-wave 560ms ease-in-out
+}
+@keyframes outline_share{
+    0%{
+        stroke: white;
+        stroke-width: .5rem;
+        stroke-dashoffset: 5677.25390625;
+        fill-opacity: 0;
+    }80%{
+        stroke-width: .5rem;
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+    }100%{
+        stroke: white;
+        stroke-width: 0;
+        fill-opacity: 1;
+    }
 }
 @keyframes outline_move{
     0%{
