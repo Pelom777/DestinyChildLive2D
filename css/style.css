@@ -28,6 +28,7 @@ nav button{
     border-style: none;
     font-size: 1rem;
     position: relative;
+    transition: .2s;
 }
 nav button:hover{
     background: #ccc;
@@ -45,7 +46,7 @@ nav button.current{
 #copyright{ 
     position: fixed; 
     text-align: center; 
-    margin: 10px; 
+    margin: .5rem; 
     right: 0; 
     bottom: 0; 
     color: white;
@@ -172,5 +173,23 @@ nav button.current{
         stroke: white;
         stroke-width: 0;
         fill-opacity: 1;
+    }
+}
+@media (max-width:500px){
+    nav{width: 6rem;left: -5rem;}
+    nav button{font-size: .8rem;width: 4rem;height: 4vh;}
+    #copyright{font-size: 0.8rem;}
+    .message{width: 10rem;margin-left: -6rem;padding: 1rem;}
+    .github-corner:hover .octo-arm{animation:none}
+    .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
+    .github-corner svg{
+        width: 2rem;
+        height: 2rem;
+    }
+    #share svg,#move svg{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: .1rem;
+        left: 0;
     }
 }
