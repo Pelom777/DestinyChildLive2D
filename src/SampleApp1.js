@@ -134,12 +134,18 @@ function init(defaultModel)
     $currentModel = null;
     for(var i=0;i<nameList.length;i++) {
         var $button = $('<button></button>');
-        $button.text(nameList[i]);
+        if(nameList[i][0] == 'c'){
+            $button.css('background', 'url(./assets/live2d/' + nameList[i] + '/icon.png) scroll 50% 50%');
+        }
+        else{
+            $button.text(nameList[i]);
+        }
+        $button.attr('id', nameList[i]);
         $button.on('click', function(){
             $currentModel.removeClass('current');
             $(this).addClass('current');
             $currentModel = $(this);
-            changeModel(this.innerHTML);
+            changeModel(this.id);
             scrollToCurrent();
         })
         $box.append($button);

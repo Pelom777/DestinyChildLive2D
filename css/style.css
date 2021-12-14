@@ -24,7 +24,7 @@ nav:hover{
 }
 nav button{
     width: 8rem;
-    height: 5vh;
+    height: 10vh;
     border-style: none;
     font-size: 1rem;
     position: relative;
@@ -50,6 +50,7 @@ nav button.current{
     right: 0; 
     bottom: 0; 
     color: white;
+    font-family: consolas;
 }
 #copyright a{
     color: aqua;
