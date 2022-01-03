@@ -2,7 +2,7 @@ var thisRef = this;
 var $msg;
 
 window.onerror = function(msg, url, line, col, error) {
-    var errmsg = "file:" + url + "<br>line:" + line + " " + msg;
+    var errmsg = 'file:' + url + '<br>line:' + line + ' ' + msg;
     l2dError(errmsg);
 }
 
@@ -30,7 +30,7 @@ function sampleApp1(defaultModel = 'c521_10')
     
     this.isModelShown = false;
     
-    initL2dCanvas("glcanvas");
+    initL2dCanvas('glcanvas');
 
     $.getJSON('./assets/names.json', function (data) {
         nameList = eval(data);
@@ -47,20 +47,20 @@ function initL2dCanvas(canvasId)
     this.canvas.height = window.innerHeight;
     
     if(this.canvas.addEventListener) {
-        this.canvas.addEventListener("mousewheel", mouseEvent, false);
-        this.canvas.addEventListener("click", mouseEvent, false);
+        this.canvas.addEventListener('mousewheel', mouseEvent, false);
+        this.canvas.addEventListener('click', mouseEvent, false);
         
-        this.canvas.addEventListener("mousedown", mouseEvent, false);
-        this.canvas.addEventListener("mousemove", mouseEvent, false);
+        this.canvas.addEventListener('mousedown', mouseEvent, false);
+        this.canvas.addEventListener('mousemove', mouseEvent, false);
         
-        this.canvas.addEventListener("mouseup", mouseEvent, false);
-        this.canvas.addEventListener("mouseout", mouseEvent, false);
-        this.canvas.addEventListener("contextmenu", mouseEvent, false);
+        this.canvas.addEventListener('mouseup', mouseEvent, false);
+        this.canvas.addEventListener('mouseout', mouseEvent, false);
+        this.canvas.addEventListener('contextmenu', mouseEvent, false);
         
         
-        this.canvas.addEventListener("touchstart", touchEvent, false);
-        this.canvas.addEventListener("touchend", touchEvent, false);
-        this.canvas.addEventListener("touchmove", touchEvent, false);
+        this.canvas.addEventListener('touchstart', touchEvent, false);
+        this.canvas.addEventListener('touchend', touchEvent, false);
+        this.canvas.addEventListener('touchmove', touchEvent, false);
         
     }
     
@@ -136,26 +136,35 @@ function init(defaultModel)
     $box = $('#box');
     $currentModel = null;
     for(var i=0;i<nameList.length;i++) {
-        var $button = $('<button></button>');
-        if(nameList[i][0] == 'c'){
-            $button.css('background', 'url(./assets/live2d/' + nameList[i] + '/icon.png) scroll 50% 50%');
-        }
-        else{
-            $button.text(nameList[i]);
-        }
-        $button.attr('id', nameList[i]);
-        $button.on('click', function(){
-            $currentModel.removeClass('current');
-            $(this).addClass('current');
-            $currentModel = $(this);
-            changeModel(this.id);
-            scrollToCurrent();
-        })
-        $box.append($button);
-        if(nameList[i] == defaultModel){
-            $button.addClass('current')
-            $currentModel = $button;
-        }
+        (function(name){
+            var $button = $('<button></button>');
+            $button.text(name);
+            if(name[0] == 'c'){
+                $button.attr('title', name);
+                $button.attr('data-original', './assets/live2d/' + name + '/icon.png');
+                $button.lazyload({
+                    container: $box,
+                    load: function(){
+                        $button.text('');
+                        $button.css('background-color', '#0000');
+                        $button.css('background-position', '50% 50%');
+                    }
+                });
+            }
+            $button.attr('id', name);
+            $button.on('click', function(){
+                $currentModel.removeClass('current');
+                $(this).addClass('current');
+                $currentModel = $(this);
+                changeModel(this.id);
+                scrollToCurrent();
+            })
+            $box.append($button);
+            if(name == defaultModel){
+                $button.addClass('current')
+                $currentModel = $button;
+            }
+        })(nameList[i]);
     }
 
     //set scroll method
@@ -228,7 +237,7 @@ function init(defaultModel)
     
     this.gl = getWebGLContext();
     if (!this.gl) {
-        l2dError("Failed to create WebGL context.");
+        l2dError('Failed to create WebGL context.');
         return;
     }
     
@@ -265,7 +274,7 @@ function startDraw() {
 
 function draw()
 {
-    // l2dLog("--> draw()");
+    // l2dLog('--> draw()');
 
     MatrixStack.reset();
     MatrixStack.loadIdentity();
@@ -353,7 +362,7 @@ function modelTurnHead(event)
     var vy = transformViewY(event.clientY - rect.top);
     
     if (LAppDefine.DEBUG_MOUSE_LOG)
-        l2dLog("onMouseDown device( x:" + event.clientX + " y:" + event.clientY + " ) view( x:" + vx + " y:" + vy + ")");
+        l2dLog('onMouseDown device( x:' + event.clientX + ' y:' + event.clientY + ' ) view( x:' + vx + ' y:' + vy + ')');
 
     thisRef.lastMouseX = sx;
     thisRef.lastMouseY = sy;
@@ -377,7 +386,7 @@ function followPointer(event)
     var vy = transformViewY(event.clientY - rect.top);
     
     if (LAppDefine.DEBUG_MOUSE_LOG)
-        l2dLog("onMouseMove device( x:" + event.clientX + " y:" + event.clientY + " ) view( x:" + vx + " y:" + vy + ")");
+        l2dLog('onMouseMove device( x:' + event.clientX + ' y:' + event.clientY + ' ) view( x:' + vx + ' y:' + vy + ')');
 
     if (thisRef.drag)
     {
@@ -405,7 +414,7 @@ function mouseEvent(e)
 {
     e.preventDefault();
     
-    if (e.type == "mousewheel") {
+    if (e.type == 'mousewheel') {
         if (e.clientX < 0 || thisRef.canvas.clientWidth < e.clientX || 
         e.clientY < 0 || thisRef.canvas.clientHeight < e.clientY)
         {
@@ -416,25 +425,25 @@ function mouseEvent(e)
         else modelScaling(0.9); 
 
         
-    } else if (e.type == "mousedown") {
+    } else if (e.type == 'mousedown') {
 
         
-        if("button" in e && e.button == 1) return;
+        if('button' in e && e.button == 1) return;
         
         modelTurnHead(e);
         
-    } else if (e.type == "mousemove") {
+    } else if (e.type == 'mousemove') {
         
         followPointer(e);
         
-    } else if (e.type == "mouseup") {
+    } else if (e.type == 'mouseup') {
         
         
-        if("button" in e && e.button != 0) return;
+        if('button' in e && e.button != 0) return;
         
         lookFront();
         
-    } else if (e.type == "mouseout") {
+    } else if (e.type == 'mouseout') {
         
         lookFront();
         
@@ -448,11 +457,11 @@ function touchEvent(e)
     
     var touch = e.touches[0];
     
-    if (e.type == "touchstart") {
+    if (e.type == 'touchstart') {
         if (e.touches.length == 1) modelTurnHead(touch);
         // onClick(touch);
         
-    } else if (e.type == "touchmove") {
+    } else if (e.type == 'touchmove') {
         followPointer(touch);
         
         if (e.touches.length == 2) {
@@ -466,7 +475,7 @@ function touchEvent(e)
             thisRef.oldLen = len;
         }
         
-    } else if (e.type == "touchend") {
+    } else if (e.type == 'touchend') {
         lookFront();
     }
 }
@@ -503,7 +512,7 @@ function transformScreenY(deviceY)
 
 function getWebGLContext()
 {
-    var NAMES = [ "webgl" , "experimental-webgl" , "webkit-3d" , "moz-webgl"];
+    var NAMES = [ 'webgl' , 'experimental-webgl' , 'webkit-3d' , 'moz-webgl'];
 
     for( var i = 0; i < NAMES.length; i++ ){
         try{
@@ -529,7 +538,7 @@ function l2dError(msg)
 {
     if(!LAppDefine.DEBUG_LOG) return;
     
-    l2dLog( "<span style='color:red'>" + msg + "</span>");
+    l2dLog( '<span style=" color:red'>' + msg + "</span>');
     
     console.error(msg);
 };
