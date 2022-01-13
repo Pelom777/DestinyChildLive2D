@@ -1,35 +1,34 @@
 var thisRef = this;
 var $msg;
 
-window.onerror = function(msg, url, line, col, error) {
+window.onerror = function (msg, url, line, col, error) {
     var errmsg = 'file:' + url + '<br>line:' + line + ' ' + msg;
     l2dError(errmsg);
 }
 
-function sampleApp1(defaultModel = 'c521_10')
-{
+function sampleApp1(defaultModel = 'c521_10') {
     this.platform = window.navigator.platform.toLowerCase();
-    
+
     this.live2DMgr = new LAppLive2DManager();
 
     this.isDrawStart = false;
-    
+
     this.gl = null;
     this.canvas = null;
-    
-    this.dragMgr = null; /*new L2DTargetPoint();*/ 
+
+    this.dragMgr = null; /*new L2DTargetPoint();*/
     this.viewMatrix = null; /*new L2DViewMatrix();*/
     this.projMatrix = null; /*new L2DMatrix44()*/
     this.deviceToScreen = null; /*new L2DMatrix44();*/
-    
-    this.drag = false; 
-    this.oldLen = 0;    
-    
+
+    this.drag = false;
+    this.oldLen = 0;
+
     this.lastMouseX = 0;
     this.lastMouseY = 0;
-    
+
     this.isModelShown = false;
-    
+
     initL2dCanvas('glcanvas');
 
     $.getJSON('./assets/names.json', function (data) {
@@ -39,31 +38,30 @@ function sampleApp1(defaultModel = 'c521_10')
 }
 
 
-function initL2dCanvas(canvasId)
-{
-    
+function initL2dCanvas(canvasId) {
+
     this.canvas = document.getElementById(canvasId);
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
-    
-    if(this.canvas.addEventListener) {
+
+    if (this.canvas.addEventListener) {
         this.canvas.addEventListener('mousewheel', mouseEvent, false);
         this.canvas.addEventListener('click', mouseEvent, false);
-        
+
         this.canvas.addEventListener('mousedown', mouseEvent, false);
         this.canvas.addEventListener('mousemove', mouseEvent, false);
-        
+
         this.canvas.addEventListener('mouseup', mouseEvent, false);
         this.canvas.addEventListener('mouseout', mouseEvent, false);
         this.canvas.addEventListener('contextmenu', mouseEvent, false);
-        
-        
+
+
         this.canvas.addEventListener('touchstart', touchEvent, false);
         this.canvas.addEventListener('touchend', touchEvent, false);
         this.canvas.addEventListener('touchmove', touchEvent, false);
-        
+
     }
-    
+
 }
 var showMessage = function (text, delay) {
     if ($msg === undefined) {
@@ -94,37 +92,38 @@ var setUrlParam = function () {
     url += '?' + $currentModel.text();
     return url;
 }
-var scrollToCurrent = function(){
-    $box.animate({scrollTop: $box.scrollTop() + $currentModel.offset().top - $(window).height() / 2}, 1000);
+var scrollToCurrent = function (time = 1000) {
+    $box.animate({
+        scrollTop: $box.scrollTop() + $currentModel.offset().top - $(window).height() / 2
+    }, time);
 }
 
-function init(defaultModel)
-{
+function init(defaultModel) {
     defaultModel = getUrlParam() || defaultModel;
     showMessage('滚动滚轮以缩放<br>点击左下角图标开始拖动', 4000);
 
     // set translate method
     isMoving = false;
     $move = $('#move');
-    $move.on('click', function(){
-        if(isMoving == true){
+    $move.on('click', function () {
+        if (isMoving == true) {
             isMoving = false;
             $move.removeClass('moving');
             $(document).off('mousedown');
         }
-        else{
+        else {
             isMoving = true;
             $move.addClass('moving');
-            $(document).on('mousedown', function(e){
-                if(e.button != 0)
+            $(document).on('mousedown', function (e) {
+                if (e.button != 0)
                     return;
                 var startX = e.clientX, startY = e.clientY;
-                $(document).on('mousemove', function(e){
+                $(document).on('mousemove', function (e) {
                     offsetX = e.clientX - startX, offsetY = e.clientY - startY;
                     startX = e.clientX, startY = e.clientY;
                     thisRef.viewMatrix.multTranslate(offsetX / 225, - offsetY / 225);
                 })
-                $(document).on('mouseup', function(){
+                $(document).on('mouseup', function () {
                     $(document).off('mousemove');
                     $(document).off('mouseup');
                 })
@@ -135,16 +134,16 @@ function init(defaultModel)
     // set model list
     $box = $('#box');
     $currentModel = null;
-    for(var i=0;i<nameList.length;i++) {
-        (function(name){
+    for (var i = 0; i < nameList.length; i++) {
+        (function (name) {
             var $button = $('<button></button>');
             $button.text(name);
-            if(name[0] == 'c'){
+            if (name[0] == 'c') {
                 $button.attr('title', name);
                 $button.attr('data-original', './assets/live2d/' + name + '/icon.png');
                 $button.lazyload({
                     container: $box,
-                    load: function(){
+                    load: function () {
                         $button.text('');
                         $button.css('background-color', '#0000');
                         $button.css('background-position', '50% 50%');
@@ -152,7 +151,7 @@ function init(defaultModel)
                 });
             }
             $button.attr('id', name);
-            $button.on('click', function(){
+            $button.on('click', function () {
                 $currentModel.removeClass('current');
                 $(this).addClass('current');
                 $currentModel = $(this);
@@ -160,7 +159,7 @@ function init(defaultModel)
                 scrollToCurrent();
             })
             $box.append($button);
-            if(name == defaultModel){
+            if (name == defaultModel) {
                 $button.addClass('current')
                 $currentModel = $button;
             }
@@ -168,41 +167,41 @@ function init(defaultModel)
     }
 
     //set scroll method
-    $box.hover(null, function(){
-        setTimeout(function(){
+    $box.hover(null, function () {
+        setTimeout(function () {
             scrollToCurrent();
         }, 500);
     })
 
     // set share method
-	$('#share').on('click', function () {
-		var url = setUrlParam();
-		var input = $('<input>').attr('value', url).attr('readonly', 'readonly');
-		$('body').append(input);
-		input.select();
-		document.execCommand('copy');
-		input.remove();
-		showMessage('链接已复制至剪贴板', 1000);
-	})
-	$('#share').on('mouseenter', function () {
-		showMessage('点击左上分享按钮，即可将当前角色及动作分享给他人', 4000);
-	})
+    $('#share').on('click', function () {
+        var url = setUrlParam();
+        var input = $('<input>').attr('value', url).attr('readonly', 'readonly');
+        $('body').append(input);
+        input.select();
+        document.execCommand('copy');
+        input.remove();
+        showMessage('链接已复制至剪贴板', 1000);
+    })
+    $('#share').on('mouseenter', function () {
+        showMessage('点击左上分享按钮，即可将当前角色及动作分享给他人', 4000);
+    })
 
     // set scale method
-    document.onwheel = function(e){
-        if(e.target != canvas)
+    document.onwheel = function (e) {
+        if (e.target != canvas)
             return;
-        if(e.wheelDelta > 0)
+        if (e.wheelDelta > 0)
             modelScaling(1.1);
         else modelScaling(0.9);
     }
 
     var width = this.canvas.width;
     var height = this.canvas.height;
-    
+
     this.dragMgr = new L2DTargetPoint();
 
-    
+
     var ratio = height / width;
     var left = LAppDefine.VIEW_LOGICAL_LEFT;
     var right = LAppDefine.VIEW_LOGICAL_RIGHT;
@@ -211,14 +210,14 @@ function init(defaultModel)
 
     this.viewMatrix = new L2DViewMatrix();
 
-    
+
     this.viewMatrix.setScreenRect(left, right, bottom, top);
-    
-    
+
+
     this.viewMatrix.setMaxScreenRect(LAppDefine.VIEW_LOGICAL_MAX_LEFT,
-                                     LAppDefine.VIEW_LOGICAL_MAX_RIGHT,
-                                     LAppDefine.VIEW_LOGICAL_MAX_BOTTOM,
-                                     LAppDefine.VIEW_LOGICAL_MAX_TOP); 
+        LAppDefine.VIEW_LOGICAL_MAX_RIGHT,
+        LAppDefine.VIEW_LOGICAL_MAX_BOTTOM,
+        LAppDefine.VIEW_LOGICAL_MAX_TOP);
 
     this.viewMatrix.setMaxScale(LAppDefine.VIEW_MAX_SCALE);
     this.viewMatrix.setMinScale(LAppDefine.VIEW_MIN_SCALE);
@@ -228,92 +227,88 @@ function init(defaultModel)
     this.projMatrix.multScale((height / width), 1); // adjust to height
     this.projMatrix.multScale(.6, .6);
 
-    
+
     this.deviceToScreen = new L2DMatrix44();
     this.deviceToScreen.multTranslate(-width / 2.0, -height / 2.0);
     this.deviceToScreen.multScale(2 / width, -2 / width);
-    
-    
-    
+
+
+
     this.gl = getWebGLContext();
     if (!this.gl) {
         l2dError('Failed to create WebGL context.');
         return;
     }
-    
+
     Live2D.setGL(this.gl);
 
-    
+
     this.gl.clearColor(0.5, 0.5, 0.5, 1.0);
 
     changeModel(defaultModel);
-    scrollToCurrent();
-    
+    scrollToCurrent(0);
+
     startDraw();
 }
 
 
 function startDraw() {
-    if(!this.isDrawStart) {
+    if (!this.isDrawStart) {
         this.isDrawStart = true;
         (function tick() {
-                draw(); 
+            draw();
 
-                var requestAnimationFrame = 
-                    window.requestAnimationFrame || 
-                    window.mozRequestAnimationFrame ||
-                    window.webkitRequestAnimationFrame || 
-                    window.msRequestAnimationFrame;
+            var requestAnimationFrame =
+                window.requestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.msRequestAnimationFrame;
 
-                
-                requestAnimationFrame(tick ,this.canvas);   
+
+            requestAnimationFrame(tick, this.canvas);
         })();
     }
 }
 
 
-function draw()
-{
+function draw() {
     // l2dLog('--> draw()');
 
     MatrixStack.reset();
     MatrixStack.loadIdentity();
-    
-    this.dragMgr.update(); 
+
+    this.dragMgr.update();
     this.live2DMgr.setDrag(this.dragMgr.getX(), this.dragMgr.getY());
-    
-    
+
+
     this.gl.clear(this.gl.COLOR_BUFFER_BIT);
-    
+
     MatrixStack.multMatrix(projMatrix.getArray());
     MatrixStack.multMatrix(viewMatrix.getArray());
     MatrixStack.push();
-    
-    for (var i = 0; i < this.live2DMgr.numModels(); i++)
-    {
+
+    for (var i = 0; i < this.live2DMgr.numModels(); i++) {
         var model = this.live2DMgr.getModel(i);
 
-        if(model == null) return;
-        
-        if (model.initialized && !model.updating)
-        {
+        if (model == null) return;
+
+        if (model.initialized && !model.updating) {
             model.update();
             model.draw(this.gl);
-            
-            if (!this.isModelShown && i == this.live2DMgr.numModels()-1) {
+
+            if (!this.isModelShown && i == this.live2DMgr.numModels() - 1) {
                 this.isModelShown = !this.isModelShown;
             }
         }
     }
-    
+
     MatrixStack.pop();
 }
 
 
-function changeModel(name)
-{
+function changeModel(name) {
     this.isModelShown = false;
-    
+
     this.live2DMgr.reloadFlg = true;
     this.live2DMgr.count++;
 
@@ -323,26 +318,21 @@ function changeModel(name)
 
 
 
-function modelScaling(scale)
-{   
+function modelScaling(scale) {
     var isMaxScale = thisRef.viewMatrix.isMaxScale();
     var isMinScale = thisRef.viewMatrix.isMinScale();
-    
+
     thisRef.viewMatrix.adjustScale(0, 0, scale);
 
-    
-    if (!isMaxScale)
-    {
-        if (thisRef.viewMatrix.isMaxScale())
-        {
+
+    if (!isMaxScale) {
+        if (thisRef.viewMatrix.isMaxScale()) {
             thisRef.live2DMgr.maxScaleEvent();
         }
     }
-    
-    if (!isMinScale)
-    {
-        if (thisRef.viewMatrix.isMinScale())
-        {
+
+    if (!isMinScale) {
+        if (thisRef.viewMatrix.isMinScale()) {
             thisRef.live2DMgr.minScaleEvent();
         }
     }
@@ -350,59 +340,54 @@ function modelScaling(scale)
 
 
 
-function modelTurnHead(event)
-{
+function modelTurnHead(event) {
     thisRef.drag = true;
-    
+
     var rect = event.target.getBoundingClientRect();
-    
+
     var sx = transformScreenX(event.clientX - rect.left);
     var sy = transformScreenY(event.clientY - rect.top);
     var vx = transformViewX(event.clientX - rect.left);
     var vy = transformViewY(event.clientY - rect.top);
-    
+
     if (LAppDefine.DEBUG_MOUSE_LOG)
         l2dLog('onMouseDown device( x:' + event.clientX + ' y:' + event.clientY + ' ) view( x:' + vx + ' y:' + vy + ')');
 
     thisRef.lastMouseX = sx;
     thisRef.lastMouseY = sy;
 
-    thisRef.dragMgr.setPoint(vx, vy); 
-    
-    if(isMoving)
+    thisRef.dragMgr.setPoint(vx, vy);
+
+    if (isMoving)
         return;
     thisRef.live2DMgr.tapEvent(vx, vy, event);
 }
 
 
 
-function followPointer(event)
-{    
+function followPointer(event) {
     var rect = event.target.getBoundingClientRect();
-    
+
     var sx = transformScreenX(event.clientX - rect.left);
     var sy = transformScreenY(event.clientY - rect.top);
     var vx = transformViewX(event.clientX - rect.left);
     var vy = transformViewY(event.clientY - rect.top);
-    
+
     if (LAppDefine.DEBUG_MOUSE_LOG)
         l2dLog('onMouseMove device( x:' + event.clientX + ' y:' + event.clientY + ' ) view( x:' + vx + ' y:' + vy + ')');
 
-    if (thisRef.drag)
-    {
+    if (thisRef.drag) {
         thisRef.lastMouseX = sx;
         thisRef.lastMouseY = sy;
 
-        thisRef.dragMgr.setPoint(vx, vy); 
+        thisRef.dragMgr.setPoint(vx, vy);
     }
 }
 
 
 
-function lookFront()
-{   
-    if (thisRef.drag)
-    {
+function lookFront() {
+    if (thisRef.drag) {
         thisRef.drag = false;
     }
 
@@ -410,71 +395,68 @@ function lookFront()
 }
 
 
-function mouseEvent(e)
-{
+function mouseEvent(e) {
     e.preventDefault();
-    
+
     if (e.type == 'mousewheel') {
-        if (e.clientX < 0 || thisRef.canvas.clientWidth < e.clientX || 
-        e.clientY < 0 || thisRef.canvas.clientHeight < e.clientY)
-        {
+        if (e.clientX < 0 || thisRef.canvas.clientWidth < e.clientX ||
+            e.clientY < 0 || thisRef.canvas.clientHeight < e.clientY) {
             return;
         }
-        
-        if (e.wheelDelta > 0) modelScaling(1.1); 
-        else modelScaling(0.9); 
 
-        
+        if (e.wheelDelta > 0) modelScaling(1.1);
+        else modelScaling(0.9);
+
+
     } else if (e.type == 'mousedown') {
 
-        
-        if('button' in e && e.button == 1) return;
-        
+
+        if ('button' in e && e.button == 1) return;
+
         modelTurnHead(e);
-        
+
     } else if (e.type == 'mousemove') {
-        
+
         followPointer(e);
-        
+
     } else if (e.type == 'mouseup') {
-        
-        
-        if('button' in e && e.button != 0) return;
-        
+
+
+        if ('button' in e && e.button != 0) return;
+
         lookFront();
-        
+
     } else if (e.type == 'mouseout') {
-        
+
         lookFront();
-        
+
     }
 }
 
 
-function touchEvent(e)
-{
+function touchEvent(e) {
     e.preventDefault();
-    
+
     var touch = e.touches[0];
-    
+
     if (e.type == 'touchstart') {
         if (e.touches.length == 1) modelTurnHead(touch);
         // onClick(touch);
-        
+
     } else if (e.type == 'touchmove') {
         followPointer(touch);
-        
+
         if (e.touches.length == 2) {
             var touch1 = e.touches[0];
             var touch2 = e.touches[1];
-            
+
             var len = Math.pow(touch1.pageX - touch2.pageX, 2) + Math.pow(touch1.pageY - touch2.pageY, 2);
-            if (thisRef.oldLen - len < 0) modelScaling(1.025); 
-            else modelScaling(0.975); 
-            
+            if (thisRef.oldLen - len < 0) modelScaling(1.025);
+            else modelScaling(0.975);
+
             thisRef.oldLen = len;
         }
-        
+
     } else if (e.type == 'touchend') {
         lookFront();
     }
@@ -483,43 +465,38 @@ function touchEvent(e)
 
 
 
-function transformViewX(deviceX)
-{
-    var screenX = this.deviceToScreen.transformX(deviceX); 
-    return viewMatrix.invertTransformX(screenX); 
+function transformViewX(deviceX) {
+    var screenX = this.deviceToScreen.transformX(deviceX);
+    return viewMatrix.invertTransformX(screenX);
 }
 
 
-function transformViewY(deviceY)
-{
-    var screenY = this.deviceToScreen.transformY(deviceY); 
-    return viewMatrix.invertTransformY(screenY); 
+function transformViewY(deviceY) {
+    var screenY = this.deviceToScreen.transformY(deviceY);
+    return viewMatrix.invertTransformY(screenY);
 }
 
 
-function transformScreenX(deviceX)
-{
+function transformScreenX(deviceX) {
     return this.deviceToScreen.transformX(deviceX);
 }
 
 
-function transformScreenY(deviceY)
-{
+function transformScreenY(deviceY) {
     return this.deviceToScreen.transformY(deviceY);
 }
 
 
 
-function getWebGLContext()
-{
-    var NAMES = [ 'webgl' , 'experimental-webgl' , 'webkit-3d' , 'moz-webgl'];
+function getWebGLContext() {
+    var NAMES = ['webgl', 'experimental-webgl', 'webkit-3d', 'moz-webgl'];
 
-    for( var i = 0; i < NAMES.length; i++ ){
-        try{
-            var ctx = this.canvas.getContext(NAMES[i], {premultipliedAlpha : true});
-            if(ctx) return ctx;
+    for (var i = 0; i < NAMES.length; i++) {
+        try {
+            var ctx = this.canvas.getContext(NAMES[i], { premultipliedAlpha: true });
+            if (ctx) return ctx;
         }
-        catch(e){}
+        catch (e) { }
     }
     return null;
 };
@@ -527,18 +504,17 @@ function getWebGLContext()
 
 
 function l2dLog(msg) {
-    if(!LAppDefine.DEBUG_LOG) return;
-    
+    if (!LAppDefine.DEBUG_LOG) return;
+
     console.log(msg);
 }
 
 
 
-function l2dError(msg)
-{
-    if(!LAppDefine.DEBUG_LOG) return;
-    
-    l2dLog( '<span style=" color:red'>' + msg + "</span>');
-    
+function l2dError(msg) {
+    if (!LAppDefine.DEBUG_LOG) return;
+
+    l2dLog('<span style=" color:red' > ' + msg + "</span>');
+
     console.error(msg);
 };

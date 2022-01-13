@@ -6,12 +6,24 @@
     ],
     "expressions":[
         {
+            "name":"angry",
+            "file":"angry.exp.json"
+        },
+        {
             "name":"confused",
             "file":"confused.exp.json"
         },
         {
             "name":"idle",
             "file":"idle.exp.json"
+        },
+        {
+            "name":"sad",
+            "file":"sad.exp.json"
+        },
+        {
+            "name":"serious",
+            "file":"serious.exp.json"
         },
         {
             "name":"smile",

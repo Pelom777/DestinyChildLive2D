@@ -5,6 +5,20 @@
         "texture_00.png",
         "texture_01.png"
     ],
+    "expressions":[
+        {
+            "name":"cry",
+            "file":"cry.exp.json"
+        },
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        },
+        {
+            "name":"surprise",
+            "file":"surprise.exp.json"
+        }
+    ],
     "motions":{
         "attack":[
             {

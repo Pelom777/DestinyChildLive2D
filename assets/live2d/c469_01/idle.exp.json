@@ -5,6 +5,7 @@
 	"params":[
 		{"id":"idle_brow_off","val":0},
 		{"id":"idle_mouse_off","val":0},
-		{"id":"serious_on","val":0}
+		{"id":"serious_on","val":0},
+		{"id":"angry_on","val":0}
 	]
 }
