@@ -38,6 +38,13 @@
                 "fade_out":0
             }
         ],
+        "banner":[
+            {
+                "file":"c441_01_banner.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
         "hit":[
             {
                 "file":"c441_01_hit.mtn",
