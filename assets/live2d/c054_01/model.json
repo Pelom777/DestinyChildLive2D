@@ -4,6 +4,16 @@
     "textures":[
         "texture_00.png"
     ],
+    "expressions":[
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        },
+        {
+            "name":"smile",
+            "file":"smile.exp.json"
+        }
+    ],
     "motions":{
         "attack":[
             {

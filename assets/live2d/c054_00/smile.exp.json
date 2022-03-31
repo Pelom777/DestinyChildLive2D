@@ -1,0 +1,9 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"EYE_CONTROL","val":-3.6},
+		{"id":"SMILE","val":1}
+	]
+}

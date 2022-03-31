@@ -1,0 +1,10 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"angry","val":1},
+		{"id":"PARAM_GIRL_EYE_OPEN_R","val":-3.12},
+		{"id":"PARAM_GIRL_EYE_OPEN","val":-3.6}
+	]
+}

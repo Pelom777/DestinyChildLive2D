@@ -3,9 +3,14 @@
 	"fade_in":0,
 	"fade_out":0,
 	"params":[
-		{"id":"teach_op","val":-30,"def":-30},
 		{"id":"FACE_OFF","val":1},
+		{"id":"teach_op","val":-30,"def":-30},
 		{"id":"smile","val":1},
-		{"id":"serious","val":0}
+		{"id":"serious","val":0},
+		{"id":"confused_on","val":0},
+		{"id":"joy_on","val":0},
+		{"id":"shy_on","val":0},
+		{"id":"surprise_on","val":0},
+		{"id":"sad_on","val":0}
 	]
 }

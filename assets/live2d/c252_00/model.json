@@ -14,12 +14,20 @@
             "file":"confused.exp.json"
         },
         {
+            "name":"fury",
+            "file":"fury.exp.json"
+        },
+        {
             "name":"idle",
             "file":"idle.exp.json"
         },
         {
             "name":"sad",
             "file":"sad.exp.json"
+        },
+        {
+            "name":"shock",
+            "file":"shock.exp.json"
         },
         {
             "name":"sigh",

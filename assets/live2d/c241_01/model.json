@@ -4,6 +4,16 @@
     "textures":[
         "texture_00.png"
     ],
+    "expressions":[
+        {
+            "name":"angry",
+            "file":"angry.exp.json"
+        },
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        }
+    ],
     "motions":{
         "attack":[
             {
