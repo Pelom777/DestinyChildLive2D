@@ -6,7 +6,7 @@ html{
     left: 0;
     top: 0;
 }
-nav{
+#box{
     position: fixed;
     top: 0;
     left: -10rem;
@@ -18,11 +18,16 @@ nav{
     direction: rtl;
     transition: .5s;
 }
-nav:hover{
+#box.unfold{
+    left: 0;
+    direction: ltr;
+    width: 100%;
+}
+#box:hover{
     left: 0;
     z-index: 1;
 }
-nav button{
+#box button{
     width: 8rem;
     height: 5rem;
     border-style: none;
@@ -30,18 +35,25 @@ nav button{
     position: relative;
     transition: .2s;
 }
-nav button:hover{
+#box.unfold button{
+    height: 8rem;
+}
+#box button:hover{
     background: #ccc;
     border-radius: .1rem;
     transform: scale(1.1);
     z-index: 2;
 }
-nav button.current{
+#box button.current{
     background: #fff555;
     border-radius: .1rem;
     transform: scale(1.2);
     box-shadow: 0 0 .5rem gray;
     z-index: 3;
+}
+#box.unfold button.current{
+    transform: scale(1.5);
+    box-shadow: none;
 }
 #copyright{ 
     position: fixed; 
@@ -68,11 +80,11 @@ nav button.current{
 }
 #share svg:hover{
     fill: aqua;
-    transition: 0.2s;
+    transition: .2s;
 }
 #share svg:active{
     fill: blue;
-    transition: 0.1s;
+    transition: .1s;
 }
 #move svg{
     position: absolute;
@@ -87,11 +99,29 @@ nav button.current{
 }
 #move svg:hover{
     fill: aqua;
-    transition: 0.2s;
+    transition: .2s;
 }
 .moving#move svg{
     fill: blue;
-    transition: 0.1s;
+    transition: .1s;
+}
+#unfold svg{
+    position: fixed;
+    left: 12rem;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    padding-right: 2rem;
+    fill: #f8f8f8;
+    display: none;
+}
+#unfold svg:hover{
+    fill: aqua;
+    transition: .2s;
+}
+#unfold svg:active{
+    fill: blue;
+    transition: .1s;
 }
 .message{
     display: none;
@@ -107,7 +137,7 @@ nav button.current{
     word-break: break-all;
     color: #3d3d3d;
     box-shadow: 0 0 40px #555555;
-    letter-spacing: 0.02rem;
+    letter-spacing: .02rem;
 }
 .github-corner svg{
     position: absolute;
@@ -177,9 +207,9 @@ nav button.current{
     }
 }
 @media (max-width:500px){
-    nav{width: 6rem;left: -5rem;}
-    nav button{font-size: .8rem;width: 4rem;height: 4vh;}
-    #copyright{font-size: 0.8rem;}
+    #box{width: 6rem;left: -5rem;}
+    #box button{font-size: .8rem;width: 4rem;height: 4vh;}
+    #copyright{font-size: .8rem;}
     .message{width: 10rem;margin-left: -6rem;padding: 1rem;}
     .github-corner:hover .octo-arm{animation:none}
     .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}

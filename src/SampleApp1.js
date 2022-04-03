@@ -152,6 +152,9 @@ function init(defaultModel) {
             }
             $button.attr('id', name);
             $button.on('click', function () {
+                setTimeout(function () {
+                    $box.removeClass('unfold');
+                }, 1500);
                 $currentModel.removeClass('current');
                 $(this).addClass('current');
                 $currentModel = $(this);
@@ -167,7 +170,12 @@ function init(defaultModel) {
     }
 
     //set scroll method
-    $box.hover(null, function () {
+    $box.hover(function () {
+        setTimeout(function () {
+            $('#unfold svg').css('display', 'block');
+        }, 200)
+    }, function () {
+        $('#unfold svg').css('display', 'none');
         setTimeout(function () {
             scrollToCurrent();
         }, 500);
@@ -195,6 +203,14 @@ function init(defaultModel) {
             modelScaling(1.1);
         else modelScaling(0.9);
     }
+
+    //set unfold method
+    $('#unfold').on('click', function () {
+        $box.addClass('unfold');
+        setTimeout(function (e) {
+            scrollToCurrent();
+        }, 1000);
+    })
 
     var width = this.canvas.width;
     var height = this.canvas.height;
