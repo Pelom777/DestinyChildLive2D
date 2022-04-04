@@ -41,8 +41,8 @@ function sampleApp1(defaultModel = 'c521_10') {
 function initL2dCanvas(canvasId) {
 
     this.canvas = document.getElementById(canvasId);
-    this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight;
+    this.canvas.width = window.innerWidth * 2;
+    this.canvas.height = window.innerHeight * 2;
 
     if (this.canvas.addEventListener) {
         this.canvas.addEventListener('mousewheel', mouseEvent, false);
