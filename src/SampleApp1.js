@@ -454,6 +454,8 @@ function mouseEvent(e) {
 
 
 function touchEvent(e) {
+    $box.removeClass('hover');
+    
     e.preventDefault();
 
     var touch = e.touches[0];
