@@ -204,11 +204,11 @@ function init(defaultModel) {
         else modelScaling(0.9);
     }
 
-    //set unfold method
+    // set unfold method
     $('#unfold').on('click', function () {
         $box.addClass('unfold');
         setTimeout(function (e) {
-            scrollToCurrent();
+            scrollToCurrent(0);
         }, 1000);
     })
 

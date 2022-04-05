@@ -117,6 +117,9 @@ LAppLive2DManager.prototype.tapEvent = function(x, y, event)
     if (LAppDefine.DEBUG_LOG)
         console.log("tapEvent view x:" + x + " y:" + y);
 
+    if(event.button == undefined){
+        event.button = Math.floor(Math.random() * 2) * 2;
+    }
     if(event.button == 0)
         this.models[0].startRandomMotion(LAppDefine.MOTION_GROUP_HIT,
                                          LAppDefine.PRIORITY_FORCE);

@@ -27,7 +27,7 @@ html{
 }
 #box:hover{
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 #box button{
     width: 8rem;
@@ -39,19 +39,20 @@ html{
 }
 #box.unfold button{
     height: 8rem;
+    background-size: contain !important;
 }
 #box button:hover{
     background: #ccc;
     border-radius: .1rem;
     transform: scale(1.1);
-    z-index: 2;
+    z-index: 3;
 }
 #box button.current{
     background: #fff555;
     border-radius: .1rem;
     transform: scale(1.2);
     box-shadow: 0 0 .5rem gray;
-    z-index: 3;
+    z-index: 4;
 }
 #box.unfold button.current{
     transform: scale(1.5);
@@ -74,11 +75,12 @@ html{
     width: 4rem;
     height: 4rem;
     top: 0;
-    left: 3rem;
+    left: 0;
     margin: .5rem;
     fill:#f8f8f8;
     stroke-dasharray: 5677.25390625;
     animation: outline_share 2s;
+    z-index: 1;
 }
 #share svg:hover{
     fill: aqua;
@@ -90,7 +92,7 @@ html{
 }
 #move svg{
     position: absolute;
-    left: 3rem;
+    left: 0;
     bottom: 0;
     width: 4rem;
     height: 4rem;
@@ -98,6 +100,7 @@ html{
     fill:#f8f8f8;
     stroke-dasharray: 6654.98583984375;
     animation: outline_move 2s;
+    z-index: 1;
 }
 #move svg:hover{
     fill: aqua;
@@ -135,10 +138,10 @@ html{
     margin-left: -10rem;
     padding: 2rem;
     background: #f5f5f5b4;
-    border-radius: 16px;
+    border-radius: 1rem;
     word-break: break-all;
     color: #3d3d3d;
-    box-shadow: 0 0 40px #555555;
+    box-shadow: 0 0 2rem #555555;
     letter-spacing: .02rem;
 }
 .github-corner svg{
@@ -209,20 +212,7 @@ html{
     }
 }
 @media (max-width:500px){
-    #box{width: 6rem;left: -5rem;}
-    #box button{font-size: .8rem;width: 4rem;height: 4vh;}
-    #copyright{font-size: .8rem;}
-    .message{width: 10rem;margin-left: -6rem;padding: 1rem;}
-    .github-corner:hover .octo-arm{animation:none}
-    .github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}
-    .github-corner svg{
-        width: 2rem;
-        height: 2rem;
-    }
-    #share svg,#move svg{
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: .1rem;
-        left: 0;
+    html{
+        font-size: 12px;
     }
 }
