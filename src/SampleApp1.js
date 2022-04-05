@@ -153,8 +153,8 @@ function init(defaultModel) {
             $button.attr('id', name);
             $button.on('click', function () {
                 setTimeout(function () {
-                    $box.removeClass('unfold').removeClass('hover');
-                    $('#unfold svg').css('display', 'none');
+                    $box.removeClass('unfold');
+                    scrollToCurrent(0);
                 }, 1500);
                 $currentModel.removeClass('current');
                 $(this).addClass('current');
