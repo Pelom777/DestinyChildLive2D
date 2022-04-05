@@ -455,6 +455,7 @@ function mouseEvent(e) {
 
 function touchEvent(e) {
     $box.removeClass('hover');
+    $('#unfold svg').css('display', 'none');
     
     e.preventDefault();
 
