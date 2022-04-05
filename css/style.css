@@ -25,7 +25,7 @@ html{
     direction: ltr;
     width: 100%;
 }
-#box:hover{
+#box.hover{
     left: 0;
     z-index: 2;
 }

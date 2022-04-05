@@ -153,7 +153,8 @@ function init(defaultModel) {
             $button.attr('id', name);
             $button.on('click', function () {
                 setTimeout(function () {
-                    $box.removeClass('unfold');
+                    $box.removeClass('unfold').removeClass('hover');
+                    $('#unfold svg').css('display', 'none');
                 }, 1500);
                 $currentModel.removeClass('current');
                 $(this).addClass('current');
@@ -171,10 +172,12 @@ function init(defaultModel) {
 
     //set scroll method
     $box.hover(function () {
+        $box.addClass('hover');
         setTimeout(function () {
             $('#unfold svg').css('display', 'block');
         }, 200)
     }, function () {
+        $box.removeClass('hover');
         $('#unfold svg').css('display', 'none');
         setTimeout(function () {
             scrollToCurrent();
