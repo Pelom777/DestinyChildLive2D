@@ -5,6 +5,9 @@
 	"params":[
 		{"id":"F_OFF_EB","val":1},
 		{"id":"F_OFF_EYE_1","val":1},
-		{"id":"EMO_A","val":1}
+		{"id":"EMO_A","val":1},
+		{"id":"sigh","val":0},
+		{"id":"smile_on","val":0},
+		{"id":"angry_on","val":0}
 	]
 }

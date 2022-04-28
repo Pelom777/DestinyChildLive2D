@@ -183,6 +183,7 @@ affair_op=-30
 confused_op=-30
 tempt_op=-30
 sigh_op=-30
+angry_op=-30
 VISIBLE:center=1
 VISIBLE:white_Ef=1
 VISIBLE:flower_ef=1

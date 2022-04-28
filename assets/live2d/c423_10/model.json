@@ -11,6 +11,10 @@
             "file":"affair.exp.json"
         },
         {
+            "name":"angry",
+            "file":"angry.exp.json"
+        },
+        {
             "name":"confused",
             "file":"confused.exp.json"
         },

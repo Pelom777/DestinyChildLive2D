@@ -4,8 +4,14 @@
 	"fade_out":0,
 	"params":[
 		{"id":"F_OFF_EB","val":1},
+		{"id":"F_OFF_EYE","val":0},
 		{"id":"F_OFF_EYE_1","val":1},
+		{"id":"F_OFF_NOSE","val":0},
 		{"id":"F_OFF_MOUTH","val":1},
-		{"id":"smile_on","val":1}
+		{"id":"F_OFF_WHITE","val":0},
+		{"id":"EMO_A","val":0},
+		{"id":"sigh","val":0},
+		{"id":"smile_on","val":1},
+		{"id":"angry_on","val":0}
 	]
 }

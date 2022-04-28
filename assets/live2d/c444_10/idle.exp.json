@@ -10,6 +10,8 @@
 		{"id":"F_OFF_MOUTH","val":0},
 		{"id":"F_OFF_WHITE","val":0},
 		{"id":"EMO_A","val":0},
-		{"id":"sigh","val":0}
+		{"id":"sigh","val":0},
+		{"id":"smile_on","val":0},
+		{"id":"angry_on","val":0}
 	]
 }

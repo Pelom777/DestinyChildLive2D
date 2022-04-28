@@ -1,0 +1,11 @@
+{
+	"type":"Live2D Expression",
+	"fade_in":0,
+	"fade_out":0,
+	"params":[
+		{"id":"face_off","val":0},
+		{"id":"angry_on","val":0},
+		{"id":"sigh_on","val":0},
+		{"id":"smile_on","val":0}
+	]
+}

@@ -9,6 +9,9 @@
 		{"id":"F_OFF_NOSE","val":0},
 		{"id":"F_OFF_MOUTH","val":1},
 		{"id":"F_OFF_WHITE","val":1},
-		{"id":"sigh","val":1}
+		{"id":"EMO_A","val":0},
+		{"id":"sigh","val":1},
+		{"id":"smile_on","val":0},
+		{"id":"angry_on","val":0}
 	]
 }

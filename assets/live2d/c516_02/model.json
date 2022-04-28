@@ -35,6 +35,13 @@
                 "fade_out":0
             }
         ],
+        "banner":[
+            {
+                "file":"c516_02_banner.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
         "hit":[
             {
                 "file":"c516_02_hit.mtn",

@@ -22,6 +22,10 @@
             "file":"irritation.exp.json"
         },
         {
+            "name":"joy",
+            "file":"joy.exp.json"
+        },
+        {
             "name":"serious",
             "file":"serious.exp.json"
         },

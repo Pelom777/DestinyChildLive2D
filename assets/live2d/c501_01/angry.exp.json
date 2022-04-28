@@ -8,6 +8,7 @@
 		{"id":"angry_ON","val":1},
 		{"id":"irrtation_On","val":0},
 		{"id":"serious_ON","val":0},
-		{"id":"confused_On","val":0}
+		{"id":"confused_On","val":0},
+		{"id":"joy_on","val":0}
 	]
 }
