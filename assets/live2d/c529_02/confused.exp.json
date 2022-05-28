@@ -7,6 +7,8 @@
 		{"id":"angry_on","val":0},
 		{"id":"serious_on","val":0},
 		{"id":"joy_on","val":0},
-		{"id":"confused_on","val":1}
+		{"id":"confused_on","val":1},
+		{"id":"shock_on","val":0},
+		{"id":"pain_on","val":0}
 	]
 }

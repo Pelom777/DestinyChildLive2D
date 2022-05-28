@@ -18,8 +18,16 @@
             "file":"joy.exp.json"
         },
         {
+            "name":"sad",
+            "file":"sad.exp.json"
+        },
+        {
             "name":"serious",
             "file":"serious.exp.json"
+        },
+        {
+            "name":"smile",
+            "file":"smile.exp.json"
         }
     ],
     "motions":{

@@ -4,6 +4,20 @@
     "textures":[
         "texture_00.png"
     ],
+    "expressions":[
+        {
+            "name":"affair",
+            "file":"affair.exp.json"
+        },
+        {
+            "name":"confused",
+            "file":"confused.exp.json"
+        },
+        {
+            "name":"idle",
+            "file":"idle.exp.json"
+        }
+    ],
     "motions":{
         "attack":[
             {

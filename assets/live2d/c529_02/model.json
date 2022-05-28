@@ -22,8 +22,16 @@
             "file":"joy.exp.json"
         },
         {
+            "name":"pain",
+            "file":"pain.exp.json"
+        },
+        {
             "name":"serious",
             "file":"serious.exp.json"
+        },
+        {
+            "name":"shock",
+            "file":"shock.exp.json"
         }
     ],
     "motions":{

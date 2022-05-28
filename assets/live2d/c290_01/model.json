@@ -6,8 +6,16 @@
     ],
     "expressions":[
         {
+            "name":"affair",
+            "file":"affair.exp.json"
+        },
+        {
             "name":"idle",
             "file":"idle.exp.json"
+        },
+        {
+            "name":"serious",
+            "file":"serious.exp.json"
         },
         {
             "name":"smile",
