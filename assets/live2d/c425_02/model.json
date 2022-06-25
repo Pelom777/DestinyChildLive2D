@@ -13,6 +13,13 @@
                 "fade_out":0
             }
         ],
+        "banner":[
+            {
+                "file":"c425_02_banner.mtn",
+                "fade_in":0,
+                "fade_out":0
+            }
+        ],
         "hit":[
             {
                 "file":"c425_02_hit.mtn",
